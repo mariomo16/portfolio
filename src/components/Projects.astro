@@ -8,6 +8,8 @@ const projects = raw<
     description: string;
     tech: string[];
     url: string;
+    store_url?: string;
+    store_label?: string;
   }[]
 >("projects.items");
 ---
@@ -43,26 +45,50 @@ const projects = raw<
                 <span class="tech-tag">{tech}</span>
               ))}
             </div>
-            <a
-              href={project.url}
-              class="card-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("projects.view_on_github")}
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+            <div class="card-links">
+              <a
+                href={project.url}
+                class="card-link"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <path d="M7 17l9.2-9.2M17 17V7H7" />
-              </svg>
-            </a>
+                {t("projects.view_on_github")}
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M7 17l9.2-9.2M17 17V7H7" />
+                </svg>
+              </a>
+              {project.store_url && (
+                <a
+                  href={project.store_url}
+                  class="card-link card-link-store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.store_label}
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M7 17l9.2-9.2M17 17V7H7" />
+                  </svg>
+                </a>
+              )}
+            </div>
           </article>
         ))
       }
@@ -143,6 +169,12 @@ const projects = raw<
     font-family: var(--font-mono);
   }
 
+  .card-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
   .card-link {
     display: inline-flex;
     align-items: center;
@@ -155,6 +187,14 @@ const projects = raw<
 
   .card-link:hover {
     gap: 10px;
+  }
+
+  .card-link-store {
+    color: var(--text-secondary);
+  }
+
+  .card-link-store:hover {
+    color: var(--text-primary);
   }
 
   @media (max-width: 640px) {

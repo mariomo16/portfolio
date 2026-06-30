@@ -25,13 +25,17 @@
         "name": "cs2-cfg-syntax",
         "description": "Extensión para VS Code que proporciona resaltado de sintaxis, autocompletado e IntelliSense para archivos de configuración de Counter-Strike 2.",
         "tech": ["TypeScript", "VS Code API"],
-        "url": "https://github.com/mariomo16/cs2-cfg-syntax"
+        "url": "https://github.com/mariomo16/cs2-cfg-syntax",
+        "store_url": "https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax",
+        "store_label": "VS Code Marketplace"
       },
       {
         "name": "cs2-lens",
         "description": "Extensión de Chrome que muestra estadísticas detalladas de CS2 y valor del inventario directamente en los perfiles de Steam.",
         "tech": ["TypeScript", "Chrome API", "Steam API"],
-        "url": "https://github.com/mariomo16/cs2-lens"
+        "url": "https://github.com/mariomo16/cs2-lens",
+        "store_url": "https://chromewebstore.google.com/detail/cs2-lens/clploogmlpocoolonhlogblopobiccgb",
+        "store_label": "Chrome Web Store"
       },
       {
         "name": "cs2-lens-proxy",
