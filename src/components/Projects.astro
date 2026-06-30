@@ -1,4 +1,6 @@
 ---
+import arrowIcon from "../assets/arrow-icon.svg?raw";
+import codeIcon from "../assets/code-icon.svg?raw";
 import { useTranslations } from "../i18n/utils";
 
 const { t, raw } = useTranslations(Astro.currentLocale || "es");
@@ -22,21 +24,7 @@ const projects = raw<
         projects.map((project) => (
           <article class="project-card">
             <div class="card-header">
-              <div class="card-icon">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
-                </svg>
-              </div>
+              <div class="card-icon" set:html={codeIcon} />
               <h3 class="card-title">{project.name}</h3>
             </div>
             <p class="card-description">{project.description}</p>
@@ -53,18 +41,7 @@ const projects = raw<
                 rel="noopener noreferrer"
               >
                 {t("projects.view_on_github")}
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M7 17l9.2-9.2M17 17V7H7" />
-                </svg>
+                <Fragment set:html={arrowIcon} />
               </a>
               {project.store_url && (
                 <a
@@ -74,18 +51,7 @@ const projects = raw<
                   rel="noopener noreferrer"
                 >
                   {project.store_label}
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M7 17l9.2-9.2M17 17V7H7" />
-                  </svg>
+                  <Fragment set:html={arrowIcon} />
                 </a>
               )}
             </div>
@@ -139,6 +105,11 @@ const projects = raw<
     flex-shrink: 0;
   }
 
+  .card-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
   .card-title {
     font-size: 1.125rem;
     font-weight: 700;
@@ -183,6 +154,11 @@ const projects = raw<
     font-weight: 600;
     color: var(--accent);
     transition: gap 0.2s;
+  }
+
+  .card-link svg {
+    width: 14px;
+    height: 14px;
   }
 
   .card-link:hover {
