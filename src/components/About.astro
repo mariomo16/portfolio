@@ -1,0 +1,128 @@
+---
+import angularSvg from "../assets/angular.svg";
+import flutterSvg from "../assets/flutter.svg";
+import javascriptSvg from "../assets/javascript.svg";
+import laravelSvg from "../assets/laravel.svg";
+import phpSvg from "../assets/php.svg";
+import typescriptSvg from "../assets/typescript.svg";
+import { useTranslations } from "../i18n/utils";
+
+const { t } = useTranslations(Astro.currentLocale || "es");
+
+const techs = [
+  { name: "Angular", color: "#DD0031", label: "Frontend", svg: angularSvg },
+  {
+    name: "TypeScript",
+    color: "#3178C6",
+    label: "Lenguaje",
+    svg: typescriptSvg,
+  },
+  {
+    name: "JavaScript",
+    color: "#F7DF1E",
+    label: "Lenguaje",
+    svg: javascriptSvg,
+  },
+  { name: "PHP", color: "#777BB4", label: "Backend", svg: phpSvg },
+  { name: "Laravel", color: "#FF2D20", label: "Backend", svg: laravelSvg },
+  { name: "Flutter", color: "#02569B", label: "Mobile", svg: flutterSvg },
+];
+---
+
+<section class="about" id="about">
+  <div class="container">
+    <h2 class="section-title">{t("about.title")}</h2>
+    <div class="about-content">
+      <div class="bio">
+        <p>{t("about.bio")}</p>
+      </div>
+      <div class="tech-grid">
+        {
+          techs.map((tech) => (
+            <div class="tech-card" style={`--tech-color: ${tech.color}`}>
+              <img src={tech.svg.src} alt={tech.name} class="tech-icon" />
+              <span class="tech-name">{tech.name}</span>
+              <span class="tech-role">{tech.label}</span>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .bio p {
+    font-size: 1.0625rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .tech-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 20px 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-align: center;
+    transition:
+      border-color 0.2s,
+      transform 0.2s;
+  }
+
+  .tech-card:hover {
+    border-color: var(--tech-color, var(--accent));
+    transform: translateY(-2px);
+  }
+
+  .tech-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tech-name {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .tech-role {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .tech-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 400px) {
+    .tech-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
