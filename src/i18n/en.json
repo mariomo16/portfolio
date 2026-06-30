@@ -1,72 +1,72 @@
 {
-  "nav": {
-    "about": "About",
-    "projects": "Projects",
-    "experience": "Experience",
-    "contact": "Contact"
-  },
-  "hero": {
-    "greeting": "Hi, I'm",
-    "title": "Mario Ortega",
-    "subtitle": "Fullstack Developer",
-    "description": "Specialized in Angular and Laravel, passionate about building functional and well-structured web applications on both frontend and backend.",
-    "cta_projects": "View Projects",
-    "cta_contact": "Get in Touch"
-  },
-  "about": {
-    "title": "About Me",
-    "bio": "Fullstack Developer specialized in Angular and Laravel, graduated in Web Application Development. Passionate about building functional and well-structured web applications on both frontend and backend. I have developed personal projects including VS Code and Chrome extensions, along with professional internship experience developing with Flutter."
-  },
-  "projects": {
-    "title": "Projects",
-    "view_on_github": "View on GitHub",
-    "items": [
-      {
-        "name": "cs2-cfg-syntax",
-        "description": "VS Code extension providing syntax highlighting, autocompletion, and IntelliSense for Counter-Strike 2 configuration files.",
-        "tech": ["TypeScript", "VS Code API"],
-        "url": "https://github.com/mariomo16/cs2-cfg-syntax",
-        "store_url": "https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax",
-        "store_label": "VS Code Marketplace"
-      },
-      {
-        "name": "cs2-lens",
-        "description": "Chrome extension that displays detailed CS2 stats and inventory value directly on Steam profiles.",
-        "tech": ["TypeScript", "Chrome API", "Steam API"],
-        "url": "https://github.com/mariomo16/cs2-lens",
-        "store_url": "https://chromewebstore.google.com/detail/cs2-lens/clploogmlpocoolonhlogblopobiccgb",
-        "store_label": "Chrome Web Store"
-      },
-      {
-        "name": "cs2-lens-proxy",
-        "description": "Secure API proxy for the cs2-lens extension, managing external API calls efficiently and securely.",
-        "tech": ["JavaScript", "REST API", "Proxy"],
-        "url": "https://github.com/mariomo16/cs2-lens-proxy"
-      }
-    ]
-  },
-  "experience": {
-    "title": "Experience",
-    "items": [
-      {
-        "role": "Intern Developer",
-        "company": "Agromarketing España",
-        "period": "4 months",
-        "description": "Mobile application development with Flutter, involved in modernizing 2 existing applications, as well as implementing new features and fixing bugs on a third one."
-      }
-    ]
-  },
-  "contact": {
-    "title": "Contact",
-    "description": "Want to get in touch? You can reach me through the following channels:",
-    "email_label": "Email",
-    "linkedin_label": "LinkedIn",
-    "github_label": "GitHub"
-  },
-  "footer": {
-    "text": "© 2026 Mario Ortega. Code under MIT License."
-  },
-  "language": {
-    "switch_to": "Español"
-  }
+	"nav": {
+		"about": "About",
+		"projects": "Projects",
+		"experience": "Experience",
+		"contact": "Contact"
+	},
+	"hero": {
+		"greeting": "Hi, I'm",
+		"title": "Mario Ortega",
+		"subtitle": "Fullstack Developer",
+		"description": "Specialized in Angular and Laravel, passionate about building functional and well-structured web applications on both frontend and backend.",
+		"cta_projects": "View Projects",
+		"cta_contact": "Get in Touch"
+	},
+	"about": {
+		"title": "About Me",
+		"bio": "Fullstack Developer specialized in Angular and Laravel, graduated in Web Application Development. Passionate about building functional and well-structured web applications on both frontend and backend. I have developed personal projects including VS Code and Chrome extensions, along with professional internship experience developing with Flutter."
+	},
+	"projects": {
+		"title": "Projects",
+		"view_on_github": "View on GitHub",
+		"items": [
+			{
+				"name": "CS2 Config Support",
+				"description": "VS Code extension providing syntax highlighting, autocompletion, and IntelliSense for Counter-Strike 2 configuration files.",
+				"tech": ["TypeScript", "VS Code API"],
+				"url": "https://github.com/mariomo16/cs2-cfg-syntax",
+				"store_url": "https://marketplace.visualstudio.com/items?itemName=mario-morales-ortega.cs2-cfg-syntax",
+				"store_label": "VS Code Marketplace"
+			},
+			{
+				"name": "CS2 Lens",
+				"description": "Chrome extension that displays detailed CS2 stats and inventory value directly on Steam profiles.",
+				"tech": ["TypeScript", "Chrome API", "Steam API"],
+				"url": "https://github.com/mariomo16/cs2-lens",
+				"store_url": "https://chromewebstore.google.com/detail/cs2-lens/clploogmlpocoolonhlogblopobiccgb",
+				"store_label": "Chrome Web Store"
+			},
+			{
+				"name": "CS2 Lens Proxy",
+				"description": "Secure API proxy for the cs2-lens extension, managing external API calls efficiently and securely.",
+				"tech": ["JavaScript", "REST API", "Proxy"],
+				"url": "https://github.com/mariomo16/cs2-lens-proxy"
+			}
+		]
+	},
+	"experience": {
+		"title": "Experience",
+		"items": [
+			{
+				"role": "Intern Developer",
+				"company": "Agromarketing España",
+				"period": "4 months",
+				"description": "Mobile application development with Flutter, involved in modernizing 2 existing applications, as well as implementing new features and fixing bugs on a third one."
+			}
+		]
+	},
+	"contact": {
+		"title": "Contact",
+		"description": "Want to get in touch? You can reach me through the following channels:",
+		"email_label": "Email",
+		"linkedin_label": "LinkedIn",
+		"github_label": "GitHub"
+	},
+	"footer": {
+		"text": "© 2026 Mario Ortega. Code under MIT License."
+	},
+	"language": {
+		"switch_to": "Español"
+	}
 }
