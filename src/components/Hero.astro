@@ -2,6 +2,7 @@
 import { useTranslations } from "../i18n/utils";
 
 const { t } = useTranslations(Astro.currentLocale || "es");
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const isEn = Astro.currentLocale === "en";
 ---
 
@@ -13,10 +14,16 @@ const isEn = Astro.currentLocale === "en";
       <h2 class="subtitle">{t("hero.subtitle")}</h2>
       <p class="description">{t("hero.description")}</p>
       <div class="cta-group">
-        <a href={isEn ? "/en/#projects" : "/#projects"} class="btn btn-primary">
+        <a
+          href={isEn ? `${base}en/#projects` : `${base}#projects`}
+          class="btn btn-primary"
+        >
           {t("hero.cta_projects")}
         </a>
-        <a href={isEn ? "/en/#contact" : "/#contact"} class="btn btn-secondary">
+        <a
+          href={isEn ? `${base}en/#contact` : `${base}#contact`}
+          class="btn btn-secondary"
+        >
           {t("hero.cta_contact")}
         </a>
       </div>

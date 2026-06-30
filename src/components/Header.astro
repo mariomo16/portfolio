@@ -2,25 +2,27 @@
 import { useTranslations } from "../i18n/utils";
 
 const { t } = useTranslations(Astro.currentLocale || "es");
-const currentPath = Astro.url.pathname;
-const isEn = currentPath.startsWith("/en");
+const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+const isEn = Astro.currentLocale === "en";
 const otherLocale = isEn ? "es" : "en";
-const switchPath = isEn ? "/" : "/en/";
+const switchPath = isEn ? base : `${base}en/`;
 ---
 
 <header class="header">
   <div class="container header-inner">
     <nav class="nav">
-      <a href={isEn ? "/en/#about" : "/#about"} class="nav-link"
+      <a href={isEn ? `${base}en/#about` : `${base}#about`} class="nav-link"
         >{t("nav.about")}</a
       >
-      <a href={isEn ? "/en/#projects" : "/#projects"} class="nav-link"
-        >{t("nav.projects")}</a
+      <a
+        href={isEn ? `${base}en/#projects` : `${base}#projects`}
+        class="nav-link">{t("nav.projects")}</a
       >
-      <a href={isEn ? "/en/#experience" : "/#experience"} class="nav-link"
-        >{t("nav.experience")}</a
+      <a
+        href={isEn ? `${base}en/#experience` : `${base}#experience`}
+        class="nav-link">{t("nav.experience")}</a
       >
-      <a href={isEn ? "/en/#contact" : "/#contact"} class="nav-link"
+      <a href={isEn ? `${base}en/#contact` : `${base}#contact`} class="nav-link"
         >{t("nav.contact")}</a
       >
     </nav>

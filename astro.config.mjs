@@ -2,11 +2,13 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  i18n: {
-    defaultLocale: "es",
-    locales: ["es", "en"],
-    routing: {
-      prefixDefaultLocale: false,
-    },
-  },
+	site: "https://mariomo16.github.io",
+	base: "/portfolio",
+	i18n: {
+		defaultLocale: "es",
+		locales: ["es", "en"],
+		routing: {
+			prefixDefaultLocale: false,
+		},
+	},
 });
