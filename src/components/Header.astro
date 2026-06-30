@@ -45,11 +45,17 @@ const switchPath = isEn ? base : `${base}en/`;
     z-index: 100;
     background: rgba(9, 9, 11, 0.8);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     height: var(--nav-height);
     display: flex;
     align-items: center;
+    will-change: filter;
+  }
+
+  @supports (-webkit-backdrop-filter: blur(0)) {
+    .header {
+      -webkit-backdrop-filter: blur(12px);
+    }
   }
 
   .header-inner {
