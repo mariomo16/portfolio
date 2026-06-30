@@ -1,0 +1,137 @@
+---
+import { useTranslations } from "../i18n/utils";
+
+const { t } = useTranslations(Astro.currentLocale || "es");
+const isEn = Astro.currentLocale === "en";
+---
+
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <p class="greeting">{t("hero.greeting")}</p>
+      <h1 class="title">{t("hero.title")}</h1>
+      <h2 class="subtitle">{t("hero.subtitle")}</h2>
+      <p class="description">{t("hero.description")}</p>
+      <div class="cta-group">
+        <a href={isEn ? "/en/#projects" : "/#projects"} class="btn btn-primary">
+          {t("hero.cta_projects")}
+        </a>
+        <a href={isEn ? "/en/#contact" : "/#contact"} class="btn btn-secondary">
+          {t("hero.cta_contact")}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: var(--nav-height);
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+  }
+
+  .greeting {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--accent);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  .title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    max-width: 540px;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 28px;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--bg-primary);
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-dim);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--text-secondary);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+  }
+</style>
