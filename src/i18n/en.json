@@ -30,18 +30,18 @@
 				"store_label": "VS Code Marketplace"
 			},
 			{
-				"name": "CS2 Lens",
+				"name": "CS2 Vision",
 				"description": "Chrome extension that displays detailed CS2 stats and inventory value directly on Steam profiles.",
 				"tech": ["TypeScript", "Chrome API", "Steam API"],
-				"url": "https://github.com/mariomo16/cs2-lens",
+				"url": "https://github.com/mariomo16/cs2-vision",
 				"store_url": "https://chromewebstore.google.com/detail/cs2-lens/clploogmlpocoolonhlogblopobiccgb",
 				"store_label": "Chrome Web Store"
 			},
 			{
-				"name": "CS2 Lens Proxy",
-				"description": "Secure API proxy for the cs2-lens extension, managing external API calls efficiently and securely.",
+				"name": "CS2 Vision Proxy",
+				"description": "Secure API proxy for the cs2-vision extension, managing external API calls efficiently and securely.",
 				"tech": ["JavaScript", "REST API", "Proxy"],
-				"url": "https://github.com/mariomo16/cs2-lens-proxy"
+				"url": "https://github.com/mariomo16/cs2-vision-proxy"
 			}
 		]
 	},
