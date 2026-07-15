@@ -34,7 +34,7 @@
 				"description": "Extensión de Chrome que muestra estadísticas detalladas de CS2 y valor del inventario directamente en los perfiles de Steam.",
 				"tech": ["TypeScript", "Chrome API", "Steam API"],
 				"url": "https://github.com/mariomo16/cs2-vision",
-				"store_url": "https://chromewebstore.google.com/detail/cs2-lens/clploogmlpocoolonhlogblopobiccgb",
+				"store_url": "https://chromewebstore.google.com/detail/cs2-vision/clploogmlpocoolonhlogblopobiccgb",
 				"store_label": "Chrome Web Store"
 			},
 			{

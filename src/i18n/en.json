@@ -34,7 +34,7 @@
 				"description": "Chrome extension that displays detailed CS2 stats and inventory value directly on Steam profiles.",
 				"tech": ["TypeScript", "Chrome API", "Steam API"],
 				"url": "https://github.com/mariomo16/cs2-vision",
-				"store_url": "https://chromewebstore.google.com/detail/cs2-lens/clploogmlpocoolonhlogblopobiccgb",
+				"store_url": "https://chromewebstore.google.com/detail/cs2-vision/clploogmlpocoolonhlogblopobiccgb",
 				"store_label": "Chrome Web Store"
 			},
 			{
