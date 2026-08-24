@@ -22,6 +22,12 @@
 		"view_on_github": "Ver en GitHub",
 		"items": [
 			{
+				"name": "GymBro",
+				"description": "Aplicación web para registrar entrenamientos: rutinas, ejercicios, sesiones con temporizador en vivo, historial y seguimiento del peso corporal.",
+				"tech": ["Next.js", "React", "TypeScript", "Tailwind CSS", "SQLite"],
+				"url": "https://github.com/mariomo16/GymBro"
+			},
+			{
 				"name": "CS2 Config Support",
 				"description": "Extensión para VS Code que proporciona resaltado de sintaxis, autocompletado e IntelliSense para archivos de configuración de Counter-Strike 2.",
 				"tech": ["TypeScript", "VS Code API"],
